@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import axios from "./axios";
+import axios from "axios";
 import "./styles.css";
 export default function WeatherSearch() {
   let [city, setCity] = useState("");
-  let [temperature, setTemperature] = useState(null);
+  //let [temperature, setTemperature] = useState(null);
   let [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState("");
   function displayWeather(response) {
