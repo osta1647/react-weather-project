@@ -7,6 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
       <h1>Weather Search Engine</h1>
+      <WeatherSearch />
       <footer>
     <a href="https://github.com/osta1647/react-weather-project"
     target="_blank"
