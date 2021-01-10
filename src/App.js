@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import WeatherSearch from "./WeatherSearch";
-import "./styles.css";
+import "./WeatherSearch.css";
 export default function App() {
   return (
     <div className="App">

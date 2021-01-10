@@ -3,11 +3,21 @@ import ReactDOM from "react-dom";
 import WeatherSearch from "./WeatherSearch";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.css";
-function App() {
+
+export default function App() {
   return (
     <div className="App">
-      <h1>Weather Search Engine</h1>
+      <div className="container">
+      <h1>🌞Weather Search Engine☔</h1>
       <WeatherSearch />
+      <footer>
+    <a href="https://github.com/osta1647/react-weather-project"
+    target="_blank" rel="noreferrer"
+    >
+      Open-source Code </a> 
+      by  Emily Osta
+    </footer>
+    </div>
     </div>
   );
 }
