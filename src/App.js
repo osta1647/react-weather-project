@@ -5,6 +5,7 @@ import "./styles.css";
 export default function App() {
   return (
     <div className="App">
+      <div className="container">
       <h1>Weather Search Engine</h1>
       <footer>
     <a href="https://github.com/osta1647/react-weather-project"
@@ -13,6 +14,7 @@ export default function App() {
       Open-source Code </a> 
       by  Emily Osta
     </footer>
+    </div>
     </div>
   );
 }
