@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherSearch.css";
+//import FormattedDate from "./FormattedDate";
 export default function WeatherSearch() {
   let [city, setCity] = useState("");
   //let [temperature, setTemperature] = useState(null);
@@ -9,6 +10,7 @@ export default function WeatherSearch() {
   function displayWeather(response) {
     setLoaded(true);
     setWeather({
+      date: response.data.dt,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
@@ -37,6 +39,7 @@ export default function WeatherSearch() {
       <div>
         {form}
         <ul>
+          <li>Date: {weather.dt}</li>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>

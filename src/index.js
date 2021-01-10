@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import WeatherSearch from "./WeatherSearch";
 import "./styles.css";
+//import FormattedDate from "./FormattedDate";
 import "bootstrap/dist/css/bootstrap.css";
 
 export default function App() {
