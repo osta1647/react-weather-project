@@ -8,7 +8,6 @@ export default function WeatherSearch(props) {
   let [loaded, setLoaded] = useState(false);
   let [weather, setWeather] = useState("");
   function displayWeather(response) {
-    setLoaded(true);
     setWeather({
       date: new Date (response.data.dt*1000),
       temperature: response.data.main.temp,
@@ -17,6 +16,7 @@ export default function WeatherSearch(props) {
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description
     });
+    setLoaded(true);
   }
   function handleSubmit(event) {
     event.preventDefault();
@@ -39,8 +39,7 @@ export default function WeatherSearch(props) {
       <div>
         {form}
         <ul>
-          <li>Date: {(weather.dt*1000)}</li>
-          <FormattedDate date={weather.dt} />
+          <li> <FormattedDate date={weather.date} /> </li>
           <li>Temperature: {Math.round(weather.temperature)}°C</li>
           <li>Description: {weather.description}</li>
           <li>Humidity: {weather.humidity}%</li>

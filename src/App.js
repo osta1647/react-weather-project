@@ -8,7 +8,6 @@ export default function App() {
       <div className="container">
       <h1>Weather Search Engine</h1>
       <WeatherSearch />
-      <h2>FormattedDate</h2>
       <footer>
     <a href="https://github.com/osta1647/react-weather-project"
     target="_blank"
