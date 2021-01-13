@@ -3,6 +3,8 @@ import ReactDOM from "react-dom";
 import WeatherSearch from "./WeatherSearch";
 import "./styles.css";
 import "bootstrap/dist/css/bootstrap.css";
+import WeatherForecast from "./WeatherForecast";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function App() {
   return (
@@ -10,6 +12,7 @@ export default function App() {
       <div className="container">
       <h1>🌞Weather Search Engine☔</h1>
       <WeatherSearch />
+ 
       <footer>
     <a href="https://github.com/osta1647/react-weather-project"
     target="_blank" rel="noreferrer"

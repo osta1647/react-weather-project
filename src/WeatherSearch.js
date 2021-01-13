@@ -3,6 +3,7 @@ import axios from "axios";
 import "./WeatherSearch.css";
 import WeatherTemperature from "./WeatherTemperature";
 import FormattedDate from "./FormattedDate";
+import WeatherForecast from "./WeatherForecast";
 export default function WeatherSearch(props) {
   let [city, setCity] = useState("");
   //let [temperature, setTemperature] = useState(null);
@@ -15,7 +16,8 @@ export default function WeatherSearch(props) {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      description: response.data.weather[0].description
+      description: response.data.weather[0].description,
+      city: response.data.name
     });
     setLoaded(true);
   }
@@ -48,6 +50,8 @@ export default function WeatherSearch(props) {
           <li>
             <img src={weather.icon} alt={weather.description} />
           </li>
+          <li> City: {weather.city}</li>
+          <WeatherForecast city= {weather.city} />
         </ul>
       </div>
     );
